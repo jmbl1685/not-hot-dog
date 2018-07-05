@@ -1,0 +1,18 @@
+{
+  "name": "nothotdog-nodejs",
+  "version": "1.0.0",
+  "description": "Not Hot Dog App using Nodejs + Express + Vision API (Microsoft Azure)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "Juan Batty <jmbl1685@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cloudinary": "^1.11.0",
+    "express": "^4.16.3",
+    "formidable": "^1.2.1",
+    "node-fetch": "^2.1.2"
+  }
+}

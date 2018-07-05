@@ -1,0 +1,35 @@
+body{
+    margin-top: 40px
+}
+
+*{
+    font-family: 'Fredoka One', cursive;
+    text-align: center;
+}
+
+#myButton{
+    height: 50px;
+    width: 150px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: #22E625;
+    color: #FFFFFF;
+    border: solid 1px #22E625;
+    outline: none;
+}
+
+#myButton:hover{
+    cursor: pointer;
+    border: solid 3px orangered;
+}
+
+#uploadImage{
+    display: none;
+}
+
+#hotdog{
+    height: 100px;
+    width: 100px;
+}
+
