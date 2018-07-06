@@ -6,22 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/css-loader.css">
+    <link rel="stylesheet" type="text/css" href="css/notification/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/notification/ns-default.css" />
+    <link rel="stylesheet" type="text/css" href="css/notification/ns-style-bar.css" />
+    <script src="js/notification/modernizr.custom.js"></script>
+    <script src="js/main.js"></script>
+
 </head>
 
 <body>
+
     <div id="loader" class="loader loader-default"></div>
-    <img src="img/hotdog.png" id="hotdog">
-    <h1>NOT HOT DOG APP - EXAMPLE</h1>
-    <h1>COGNITIVE SERVICE (VISION API) Microsoft Azure</h1>
-    <h2>Nodejs + Express + Cloudinary + Vanillajs</h2>
-    <button id="myButton">Upload image</button>
-    <input type="file" id="uploadImage">
+    <div class="center">
+        <div class="codrops-header">
+            <img src="img/hotdog.png" id="hotdog">
+            <h1>NotHotDog App Example
+                <span>Microsoft Azure - Cognitive Service (Vision Api)
+                    <br> Nodejs + Express + Cloudinary + Vanillajs</span>
+            </h1>
+            <button id="myButton" class="progress-button">
+                <span class="content">Upload Image</span>
+                <span class="progress"></span>
+            </button>
+            <input type="file" id="uploadImage">
+        </div>
+    </div>
 
     <script src="js/sweetalert.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/notification/classie.js"></script>
+	<script src="js/notification/notificationFx.js"></script>
 
 </body>
 

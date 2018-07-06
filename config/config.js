@@ -1,6 +1,6 @@
 'use strict'
 
-const { resolve } = require('path');
+const { resolve } = require('path')
 
 const messages = {
   ERROR: {
@@ -14,7 +14,7 @@ const messages = {
 
 module.exports = {
   sizeLimit: 43464400,
-  port: 3000,
+  port: process.env.PORT || 3000,
   credentials: {
     cloudinary: require(resolve('./credentials/cloudinary.json')),
     visionapi: require(resolve('./credentials/vision-api.json')),

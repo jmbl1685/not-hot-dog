@@ -1,12 +1,24 @@
 'use strict';
 
-const fetch   = require('node-fetch')
-const config  = require('./config/config')
+const fetch = require('node-fetch')
+const config = require('./config/config')
 
 const visionApi = {
     key: config.credentials.visionapi.key,
     endpoint: config.credentials.visionapi.endpoint
 }
+
+/* Wake Up Heroku Server */
+setInterval(() => {
+    fetch('https://nothotdog.herokuapp.com/')
+        .then(function (response) {
+            return response.text()
+        })
+        .then(function (response) {
+            let date = new Date(Date.now()).toLocaleString()
+            console.log(`Wake Up [Server] ${date}`)
+        })
+}, 300000)
 
 module.exports = {
 
@@ -24,6 +36,7 @@ module.exports = {
         const response = await fetch(visionApi.endpoint, options)
         const json = await response.json()
         let tagsHotDogCount = 0
+
 
         json.tags.forEach(tag => {
             if (tag.name == 'hot' | tag.name == 'dog') {
