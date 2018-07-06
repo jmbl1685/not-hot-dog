@@ -8,17 +8,20 @@ const visionApi = {
     endpoint: config.credentials.visionapi.endpoint
 }
 
+/* 25 minutos en Milisegundos */
+const MIN_25 = 1500000
+
 /* Wake Up Heroku Server */
 setInterval(() => {
     fetch('https://nothotdog.herokuapp.com/')
-        .then(function (response) {
+        .then( response => {
             return response.text()
         })
-        .then(function (response) {
+        .then( () =>{
             let date = new Date(Date.now()).toLocaleString()
             console.log(`Wake Up [Server] ${date}`)
         })
-}, 300000)
+}, MIN_25)
 
 module.exports = {
 
